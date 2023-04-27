@@ -6,7 +6,7 @@
 body {
 
     display: grid;
-    grid-template-rows: repeat(4, 20%);
+    grid-template-rows: repeat(5, 20%);
     min-height: 1200px;
    /* max-width: 1300px;
     margin: o auto;*/
