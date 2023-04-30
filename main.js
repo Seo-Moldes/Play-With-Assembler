@@ -1,3 +1,7 @@
+
+
+//UPLOAD SCORES TO LOCAL STORAGE
+
 const inputName = document.querySelector("#input");
 const buttonStart = document.querySelector("#buttonStart");
 
