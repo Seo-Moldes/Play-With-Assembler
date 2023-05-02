@@ -14,13 +14,13 @@
 
     <main class="main">
 
-       
 
-        <div id="divForm"  class="div-form">
+        <div id="divForm" class="div-form">
+
 
             <form id="formMainPage">
 
-            <h1>Choose a username</h1>
+                <h1>Choose a username</h1>
 
                 <label for="User Name">Username</label>
                 <input id="input" type="text" placeholder="Username">
@@ -29,19 +29,27 @@
 
             </form>
 
-            <div id="initGameDiv" class="init-game hidden"><button id="init">Start Game</button></div>
-
-                <div id="divInitGame" class=" div-init-game hidden"> <button id="buttonPage3">Click Here</button></div>
 
         </div>
+
+        <div id="divGame" class="div-game">
+            <div class="count-down" id="countDown"></div>
+
+            <div id="initGameDiv" class="init-game hidden"><button id="init">Start Game</button></div>
+
+            <div id="divInitGame" class=" div-init-game hidden"> <button id="buttonPage3">Click Here</button></div>
+
+            <div id="finalPage" class="hidden"><h2>final page</h2></div>
+        </div>
+
 
         <div class="div-user-score">
 
             <h2>User Scores</h2>
 
-            <ul class="ul">
+            <ul id="ul" class="ul">
                 <th>Name</th>
-                <li>currently playing</li>
+                <li id="li">currently playing</li>
                 <th>Name</th>
                 <li>currently playing</li>
                 <th>Name</th>

@@ -32,6 +32,7 @@ h1 {
     background-color: white;
 }
 
+
 form {
     display: none;
     grid-column: 2/4;
@@ -47,6 +48,18 @@ form input {
     width: 90%;
     padding: 12px;
     margin: 8px 0;
+}
+
+.div-game {
+    display: none;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(3, 160px);
+    text-align: center;
+    width: 600px;
+    height: 480px;
+    background-color: white;
 }
 
 #buttonStart {
@@ -104,6 +117,12 @@ li {
     margin: 0 auto;
     background-color: beige;
     padding: 5px;
+}
+
+count-down {
+
+text-align: center;
+
 }
 
 

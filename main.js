@@ -1,6 +1,6 @@
 
 const inputName = document.querySelector("#input");
-const buttonStart = document.querySelector("#button")
+const buttonStart = document.querySelector("#button");
 const mainPageForm = document.querySelector("#formMainPage");
 const initGamePage = document.querySelector("#initGameDiv");
 const gameStart = document.querySelector("#divGame");
@@ -8,6 +8,10 @@ const buttonPage3 = document.querySelector("#buttonPage3");
 const initGame = document.querySelector("#init");
 const divInitGame = document.querySelector("#divInitGame");
 const divForm = document.querySelector("#divForm");
+const count10 = document.querySelector("#countDown");
+const gameDiv = document.querySelector("#divGame");
+const li = document.querySelector("#li");
+const finalPage = document.querySelector("finalPage");
 
 mainPageForm.classList.add("visible");
 divForm.classList.add("visible");
@@ -18,11 +22,11 @@ buttonStart.addEventListener("click", function (event) {
     //evita que el formulario se envíe y cause errores al desaparecer
     event.preventDefault();
 
-    divForm.classList.remove("hidden");
-    mainPageForm.classList.remove("hidden");
+    divForm.classList.remove("visible");
+     gameDiv.style.display = "grid";
     initGamePage.classList.add("visible");
 
-const players = {Name: inputName.value, Score: 0};
+const players = {Name: inputName.value, Score: clickCount };
 
 if(localStorage.hasOwnProperty("players") === false ) {
 
@@ -45,17 +49,68 @@ localStorage.setItem("players", JSON.stringify(playersLocal));
 
 });
 
+//COUNT
+
+let count = 10;
+
 
   initGame.addEventListener("click", function() {
 
      initGamePage.classList.remove("hidden");
      divInitGame.classList.add("visible");
 
-     let contador = 10;
-
      
+     count10.textContent = count;
+
+     const countDown = setInterval(function() {
+
+        count --;
+
+        count10.textContent = count;
+        
+        if(count === 0) {
+
+            clearInterval(countDown);
+
+            count10.textContent = "Time`s up";
+        }
+
+     }, 1000);
 
   });
+
+  //CLICK COUNT
+  let clickCount = 0;
+
+  buttonPage3.addEventListener("click", function() {
+
+    clickCount++;
+
+    li.textContent = clickCount;
+
+    console.log(clickCount);
+    
+    if(count === 0) {
+        
+        finalPage.classList.add("visible");
+        divInitGame.classList.remove("hidden");
+
+    };
+
+  });
+
+  //FINAL SCORE PAGE
+
+
+//   if(clickCount === 0 ) {
+
+//     finalPage.classList.add ("visible");
+//     divInitGame.classList.remove("visible");
+    
+    
+//         };
+    
+
 
 
 
