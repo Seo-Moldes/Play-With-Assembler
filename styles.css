@@ -3,17 +3,6 @@
     margin: 0;
 }
 
-/* body {
-
-    display: grid;
-    grid-template-rows: 25% 25% 25% 25%;
-    grid-template-columns: repeat(8, 12.5%);
-    min-height: 1200px;
-    background-color: pink;
-    max-width: 1300px;
-    margin: o auto;
-} */
-
 .main {
     display: grid;
     grid-template-columns: repeat(6, 16.6%);
@@ -32,9 +21,11 @@ h1 {
 }
 
 .div-form {
-    display: grid;
-    grid-row: 2/4;
-    grid-column: 2/6;
+    display: none;
+    grid-row: 2/3;
+    grid-column: 2/3;
+    grid-template-columns: repeat(4, 150px);
+    grid-template-rows: repeat(3, 160px);
     text-align: center;
     width: 600px;
     height: 480px;
@@ -42,6 +33,9 @@ h1 {
 }
 
 form {
+    display: none;
+    grid-column: 2/4;
+    grid-row: 2/3;
     width: 300px;
     height: 80px;
     margin: 0 auto;
@@ -88,4 +82,35 @@ ul {
 li {
     padding-top: 20px;
     padding-bottom: 20px;
+}
+
+.init-game {
+    display: none;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    width: 300px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: beige;
+    padding: 5px;
+}
+
+.div-init-game {
+    display: none;
+    grid-column: 2/4;
+    grid-row: 2/3;
+    width: 300px;
+    height: 80px;
+    margin: 0 auto;
+    background-color: beige;
+    padding: 5px;
+}
+
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: grid;
 }
