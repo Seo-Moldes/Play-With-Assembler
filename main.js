@@ -11,7 +11,7 @@ const divForm = document.querySelector("#divForm");
 const count10 = document.querySelector("#countDown");
 const gameDiv = document.querySelector("#divGame");
 const li = document.querySelector("#li");
-const finalPage = document.querySelector("finalPage");
+const finalPage = document.querySelector("#finalPage");
 
 mainPageForm.classList.add("visible");
 divForm.classList.add("visible");
@@ -70,14 +70,22 @@ let count = 10;
         
         if(count === 0) {
 
-            clearInterval(countDown);
+          finalPage.classList.add("visible");
+          divInitGame.classList.remove("hidden");
 
             count10.textContent = "Time`s up";
+           pararIntervalo(countDown);
+           
         }
 
      }, 1000);
 
   });
+
+  function pararIntervalo (interval) {
+
+    clearInterval(interval);
+  };
 
   //CLICK COUNT
   let clickCount = 0;
@@ -90,27 +98,9 @@ let count = 10;
 
     console.log(clickCount);
     
-    if(count === 0) {
-        
-        finalPage.classList.add("visible");
-        divInitGame.classList.remove("hidden");
-
-    };
-
   });
 
-  //FINAL SCORE PAGE
-
-
-//   if(clickCount === 0 ) {
-
-//     finalPage.classList.add ("visible");
-//     divInitGame.classList.remove("visible");
-    
-    
-//         };
-    
-
+ 
 
 
 
